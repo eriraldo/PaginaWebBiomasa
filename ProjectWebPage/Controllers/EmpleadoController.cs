@@ -12,5 +12,9 @@ namespace ProjectWebPage.Controllers
         {
             return View();
         }
+        public ActionResult MenuEmpleado()
+        {
+            return View();
+        }
     }
 }

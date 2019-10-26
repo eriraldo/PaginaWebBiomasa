@@ -28,9 +28,9 @@ namespace ProjectWebPage
             int id = login.idUsuario;
 
             //string x = await makePostAsync(user);
-            Console.WriteLine(x);
+            //Console.WriteLine(x);
             
-            return View();
+            return View("");
         }
 
         public async Task<string> makePostAsync(string json)
@@ -44,6 +44,12 @@ namespace ProjectWebPage
             var response = await client.PostAsync("http://172.20.10.2:5000/loginProductor", content);
             var responseString = await response.Content.ReadAsStringAsync();
             return responseString;
+        }
+
+        public ActionResult MostrarRegistroBiomasa()
+        {
+            
+            return View();
         }
 
     }

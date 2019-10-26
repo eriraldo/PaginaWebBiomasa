@@ -20,5 +20,10 @@ namespace ProjectWebPage.Controllers
 
             return View();
         }
+
+        public ActionResult MostrarViajes()
+        {
+            return View();
+        }
     }
 }
