@@ -1,0 +1,28 @@
+﻿@model ProjectWebPage.Models.TransportistaClass
+    <h1>Detalle del transporte de la Biomasa</h1>
+    @using (Html.BeginForm("MenuTrans", "Transportista", FormMethod.Post))
+    {
+        
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        Cantidad:
+                        @Html.EditorFor(model => model.IdPaquete, new { htmlAttributes = new { @class = "form-control" } })
+                        <br />
+                        Estado:
+                        @Html.EditorFor(model => model.Entregado, new { htmlAttributes = new { @class = "form-control" } })
+                        <br />
+                        Nombre Productor:
+                        @Html.EditorFor(model => model.Recibido, new { htmlAttributes = new { @class = "form-control" } })
+                        <br />
+                        <input type="submit" value="Confirmar" />
+
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+
+

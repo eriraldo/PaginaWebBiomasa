@@ -1,0 +1,29 @@
+﻿@model ProjectWebPage.Models.ProductorClass
+<h1>Enviar Biomasa</h1>
+
+@using (Html.BeginForm("MenuProductor", "Productor", FormMethod.Post))
+{
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Cantidad:
+                    @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    Estado:
+                    @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    Nombre Productor:
+                    @Html.EditorFor(model => model.NombreProductor, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <input type="submit" value="Enviar" />
+
+
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+

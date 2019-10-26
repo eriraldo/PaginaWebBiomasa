@@ -1,0 +1,41 @@
+﻿@using System.Data;
+
+@{
+    ViewBag.Title = "Listado de paquetes que se han llevado en los viajes";
+}
+
+    <h2 style="text-align:center;">Listado de paquetes que se han llevado en los viajes</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista paquetes</title>
+</head>
+<body>
+    <table class="table">
+        <tr bgcolor="lightGray">
+            <th>CantidadBioabono</th>
+            <th>CantidadEnergia</th>
+            <th>biomasaUsada</th>
+            <th>costo</th>
+
+        </tr>
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["CantidadBioabono"]</td>
+                <td>@row["CantidadEnergia"]</td>
+                <td>@row["biomasaUsada"]</td>
+                <td>@row["costo"]</td>
+
+            </tr>
+        }
+    </table>
+
+
+</body>
+</html>
+
+<!-- dio el error de que el /productor/mostrarRegistroBiomasa-->

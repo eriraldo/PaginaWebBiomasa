@@ -1,0 +1,34 @@
+﻿@model ProjectWebPage.Models.EmpleadoClass
+<h1>Enviar cantidad de bioabono y energía</h1>
+
+@using (Html.BeginForm("MenuProductor", "Productor", FormMethod.Post))
+{
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Cantidad de BioAbono producido:
+                    @Html.EditorFor(model => model.CantidadBioabono, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    Cantidad de Energía producida:
+                    @Html.EditorFor(model => model.CantidadEnergia, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    Cantidad de Biomasa usada:
+                    @Html.EditorFor(model => model.biomasaUsada, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    Costo:
+                    @Html.EditorFor(model => model.costo, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+
+                    <input type="submit" value="Enviar" />
+
+
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+
+
