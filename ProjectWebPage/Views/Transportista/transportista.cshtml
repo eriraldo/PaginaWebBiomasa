@@ -3,7 +3,7 @@
     ViewBag.Title = "Transportista";
 }
 <h2>@ViewBag.Title</h2>
-@using (Html.BeginForm("MenuTrans", "Transportista", FormMethod.Post))
+@using (Html.BeginForm("Transportista", "Transportista", FormMethod.Post))
 {
     <div>
         <table>
@@ -16,7 +16,8 @@
                     @Html.EditorFor(model => model.contrasena, new { htmlAttributes = new { @class = "form-control" } })
                     <br />
                     <input type="submit" value="Login" />
-                    
+                    @Html.ActionLink("Crear nuevo Usuario", "NuevoUsuario")
+
 
                 </td>
             </tr>

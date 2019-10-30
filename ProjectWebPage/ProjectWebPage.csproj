@@ -178,6 +178,8 @@
     <Content Include="Views\Empleado\MenuEmpleado.cshtml" />
     <Content Include="Views\Transportista\MostrarViajes.cshtml" />
     <Content Include="Views\Productor\MostrarRegistroBiomasa.cshtml" />
+    <Content Include="Views\Productor\NuevoUsuario.cshtml" />
+    <Content Include="Views\Empleado\MostrarProduccion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

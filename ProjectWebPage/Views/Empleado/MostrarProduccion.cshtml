@@ -1,0 +1,46 @@
+﻿@using System.Data;
+
+@{
+    ViewBag.Title = "Mostrar Producción";
+}
+
+<h2 style="text-align:center;">
+    @using System.Data;
+
+@{
+    ViewBag.Title = "Mostrar Producción";
+}
+
+    <h2 style="text-align:center;">Mostrar Producción</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mostrar Producción</title>
+</head>
+<body>
+    <h3>Mostrar Producción</h3>
+    <table class="table">
+        <tr bgcolor="lightGray">
+            <th>Cantidad de Abono</th>
+            <th>Cantidad de Energia</th>
+            <th>Biomasa utilizada</th>
+            <th>Costo</th>
+        </tr>
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["cantidadAbono"]</td>
+                <td>@row["cantidadEnergia"]</td>
+                <td>@row["biomasaUsada"]</td>
+                <td>@row["costo"]</td>
+
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
+

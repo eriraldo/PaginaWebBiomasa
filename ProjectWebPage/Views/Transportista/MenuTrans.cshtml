@@ -7,13 +7,13 @@
             <table>
                 <tr>
                     <td>
-                        Cantidad:
+                        código del Paquete:
                         @Html.EditorFor(model => model.IdPaquete, new { htmlAttributes = new { @class = "form-control" } })
                         <br />
-                        Estado:
+                        Fecha de entrega:
                         @Html.EditorFor(model => model.Entregado, new { htmlAttributes = new { @class = "form-control" } })
                         <br />
-                        Nombre Productor:
+                        Fecha de recibido:
                         @Html.EditorFor(model => model.Recibido, new { htmlAttributes = new { @class = "form-control" } })
                         <br />
                         <input type="submit" value="Confirmar" />

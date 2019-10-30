@@ -9,7 +9,7 @@ namespace ProjectWebPage.Models
     {
         public string usuario { get; set; }
         public string contrasena { get; set; }
-        public int idUsuario { get; set; }
+        public string idUsuario { get; set; }
 
     }
 }

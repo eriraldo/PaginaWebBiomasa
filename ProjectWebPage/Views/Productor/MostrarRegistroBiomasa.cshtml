@@ -1,44 +1,48 @@
 ﻿@using System.Data;
 
 @{
-    ViewBag.Title = "HistorialReservasCliente";
+    ViewBag.Title = "Mostrar Registro de la Biomasa";
 }
 
-<h2 style="text-align:center;">Historial de Reservaciones</h2>
+<h2 style="text-align:center;">@using System.Data;
+
+@{
+    ViewBag.Title = "Mostrar Registro de la Biomasa";
+}
+
+    <h2 style="text-align:center;">Mostrar Registro de la Biomasa</h2>
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Produccion</title>
+    <title>MostrarRegistroBiomasa</title>
 </head>
 <body>
+    <h3>MostrarRegistroBiomasa</h3>
     <table class="table">
         <tr bgcolor="lightGray">
-            <th>CantidadBioabono</th>
-            <th>CantidadEnergia</th>
-            <th>biomasaUsada</th>
-            <th>costo</th>
-
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <th>Nombre del Productor</th>
+            
         </tr>
-
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["cantidad"]</td>
+                <td>@row["estado"]</td>
+                <td>@row["nombreProductor"]</td>
+                
+            </tr>
+        }
     </table>
-
-
 </body>
 </html>
 
-<!-- dio el error de que el /productor/mostrarRegistroBiomasa
 
 
-    va arroba foreach (DataRow row in Model.Rows)
-        {
-            <tr>
-                <td>va arroba row["CantidadBioabono"]</td>
-                <td>va arroba row["CantidadEnergia"]</td>
-                <td>va arroba row["biomasaUsada"]</td>
-                <td>va arroba row["costo"]</td>
 
-            </tr>
-        }-->
+
+
