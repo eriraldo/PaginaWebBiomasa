@@ -11,10 +11,10 @@
                         @Html.EditorFor(model => model.IdPaquete, new { htmlAttributes = new { @class = "form-control" } })
                         <br />
                         Fecha de entrega:
-                        @Html.EditorFor(model => model.Entregado, new { htmlAttributes = new { @class = "form-control" } })
+                        <input name="fechaEntregado" type="date" id="fechaEntregado">
                         <br />
                         Fecha de recibido:
-                        @Html.EditorFor(model => model.Recibido, new { htmlAttributes = new { @class = "form-control" } })
+                        <input name="fechaRecibido" type="date" id="fechaRecibido">
                         <br />
                         <input type="submit" value="Confirmar" />
                         @Html.ActionLink("Ver listado de viajes", "MostrarViajes")

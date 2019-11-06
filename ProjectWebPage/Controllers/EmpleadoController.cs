@@ -123,7 +123,12 @@ namespace ProjectWebPage.Controllers
 
             DataTable dataTable = JsonConvert.DeserializeObject<DataTable>(JsonConvert.SerializeObject(newJson));
             
+            
             return View(dataTable);
+        }
+        public DateTime getDateTimeFromUnixTimeStamp(uint timestamp)
+        {
+            return new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(timestamp);
         }
 
         public ActionResult NuevoUsuario()

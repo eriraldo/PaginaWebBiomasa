@@ -78,14 +78,14 @@ namespace ProjectWebPage.Controllers
             nuevo.IdPaquete = clase.IdPaquete;
             nuevo.Entregado = clase.Entregado;
             nuevo.Recibido = clase.Recibido;
-            int fechaEnt = (int)nuevo.Entregado.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
-            int fechaRec = (int)nuevo.Recibido.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
-
+            string entregadoStr = Request.Form["fechaEntregado"].ToString();
+            string recibidoStr = Request.Form["fechaRecibido"].ToString();
+            System.Diagnostics.Debug.WriteLine(entregadoStr.ToString());
             var myDict = new Dictionary<string, string>
         {
             { "codigoPaquete", nuevo.IdPaquete.ToString() },
-            { "fechaRecibido", fechaEnt.ToString() },
-            { "fechaEntregado", fechaRec.ToString() }
+            { "fechaRecibido", entregadoStr },
+            { "fechaEntregado", recibidoStr }
             
 
         };
@@ -125,9 +125,14 @@ namespace ProjectWebPage.Controllers
             JArray newJson = JArray.Parse(dr);
 
             DataTable dataTable = JsonConvert.DeserializeObject<DataTable>(JsonConvert.SerializeObject(newJson));
-            //string html = ConvertDataTableToHTML(dataTable);
+            
+
+
             return View(dataTable);
         }
+
+        
+
         public ActionResult NuevoUsuario()
         {
             return View("~/Views/Productor/NuevoUsuario.cshtml");
