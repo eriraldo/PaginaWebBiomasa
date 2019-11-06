@@ -18,7 +18,7 @@ namespace ProjectWebPage
     public class ProductorController : Controller
     {
         private static readonly HttpClient client = new HttpClient();
-
+        private static string usuario;
         // GET: Productor
         public ActionResult Productor()
         {
@@ -45,6 +45,7 @@ namespace ProjectWebPage
             if (x.GetValue("status").ToString() == "True" && x.GetValue("idProductor").ToString() == "1")
                 {
                 System.Diagnostics.Debug.WriteLine(x.GetValue("status").ToString());
+                usuario = nuevo.usuario;
                 return RedirectToAction("MenuProductor");
                 }
                 else
@@ -100,13 +101,13 @@ namespace ProjectWebPage
             ProductorClass nuevo = new ProductorClass();
             nuevo.Cantidad = clase.Cantidad;
             nuevo.Estado = clase.Estado;
-            nuevo.NombreProductor = clase.NombreProductor;
+            
 
             var myDict = new Dictionary<string, string>
         {
             { "cantidad", nuevo.Cantidad.ToString() },
             { "estado", nuevo.Estado },
-            { "nombreProductor", nuevo.NombreProductor }
+            { "nombreProductor", usuario }
         };
 
             JObject x = await crearMenuProdu(myDict);
